@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="480dp"
+    android:width="480dp"
+    android:viewportHeight="480"
+    android:viewportWidth="480"
+    android:name="backWhole" >
+
+    <group
+        android:name="back_circle"
+        android:pivotX="240"
+        android:pivotY="240" >
+        <path
+            android:name="puck"
+            android:fillColor="@color/colorCredits"
+            android:pathData="@string/back_circle_path" />
+    </group>
+
+</vector>

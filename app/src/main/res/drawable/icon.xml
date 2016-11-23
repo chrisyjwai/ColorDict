@@ -1,0 +1,86 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="4800dp"
+    android:width="4800dp"
+    android:viewportHeight="4800"
+    android:viewportWidth="4800" >
+
+    <group
+        android:name="background"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y" >
+        <path
+            android:name="background_circle"
+            android:fillColor="@color/colorIconBackground"
+            android:pathData="@string/p_icon_background" />
+    </group>
+    <group
+        android:name="anger"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:rotation="0" >
+        <path
+            android:name="anger_slice"
+            android:fillColor="@color/colorAnger"
+            android:pathData="@string/p_icon_slice" />
+    </group>
+    <group
+        android:name="disgust"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:rotation="60" >
+        <path
+            android:name="disgust_slice"
+            android:fillColor="@color/colorDisgust"
+            android:pathData="@string/p_icon_slice" />
+    </group>
+    <group
+        android:name="sadness"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:rotation="120" >
+        <path
+            android:name="sadness_slice"
+            android:fillColor="@color/colorSadness"
+            android:pathData="@string/p_icon_slice" />
+    </group>
+    <group
+        android:name="happiness"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:rotation="180" >
+        <path
+            android:name="happiness_slice"
+            android:fillColor="@color/colorHappiness"
+            android:pathData="@string/p_icon_slice" />
+    </group>
+    <group
+        android:name="surprise"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:rotation="240" >
+        <path
+            android:name="surprise_slice"
+            android:fillColor="@color/colorSurprise"
+            android:pathData="@string/p_icon_slice" />
+    </group>
+    <group
+        android:name="fear"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:rotation="300" >
+        <path
+            android:name="fear_slice"
+            android:fillColor="@color/colorFear"
+            android:pathData="@string/p_icon_slice" />
+    </group>
+    <group
+        android:name="credits"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y" >
+        <path
+            android:name="credits_circle"
+            android:fillColor="@color/colorCredits"
+            android:pathData="@string/p_credits_circle" />
+    </group>
+
+</vector>

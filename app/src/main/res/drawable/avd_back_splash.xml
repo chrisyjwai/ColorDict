@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/back_circle" >
+    <target
+        android:animation="@animator/partial_shrink_in"
+        android:name="back_circle" />
+    <target
+        android:animation="@animator/whole_fade_in"
+        android:name="backWhole" />
+</animated-vector>

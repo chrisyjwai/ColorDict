@@ -1,0 +1,102 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="4800dp"
+    android:width="4800dp"
+    android:viewportHeight="4800"
+    android:viewportWidth="4800"
+    android:name="pieWhole" >
+
+    <group
+        android:name="whole"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y" >
+
+        <group
+            android:name="anger"
+            android:pivotX="@string/pivot_X"
+            android:pivotY="@string/pivot_Y" >
+            <path
+                android:name="anger_slice"
+                android:fillColor="@color/colorAnger"
+                android:pathData="@string/p_anger_slice" />
+            <path
+                android:name="anger_word"
+                android:fillColor="#FFFFFF"
+                android:pathData="@string/anger_word" />
+        </group>
+        <group
+            android:name="disgust"
+            android:pivotX="@string/pivot_X"
+            android:pivotY="@string/pivot_Y" >
+            <path
+                android:name="disgust_slice"
+                android:fillColor="@color/colorDisgust"
+                android:pathData="@string/p_disgust_slice" />
+            <path
+                android:name="disgust_word"
+                android:fillColor="#FFFFFF"
+                android:pathData="@string/disgust_word" />
+        </group>
+        <group
+            android:name="sadness"
+            android:pivotX="@string/pivot_X"
+            android:pivotY="@string/pivot_Y" >
+            <path
+                android:name="sadness_slice"
+                android:fillColor="@color/colorSadness"
+                android:pathData="@string/p_sadness_slice" />
+            <path
+                android:name="sadness_word"
+                android:fillColor="#FFFFFF"
+                android:pathData="@string/sadness_word" />
+        </group>
+        <group
+            android:name="happiness"
+            android:pivotX="@string/pivot_X"
+            android:pivotY="@string/pivot_Y" >
+            <path
+                android:name="happiness_slice"
+                android:fillColor="@color/colorHappiness"
+                android:pathData="@string/p_happiness_slice" />
+            <path
+                android:name="happiness_word"
+                android:fillColor="#FFFFFF"
+                android:pathData="@string/happiness_word" />
+        </group>
+        <group
+            android:name="surprise"
+            android:pivotX="@string/pivot_X"
+            android:pivotY="@string/pivot_Y" >
+            <path
+                android:name="surprise_slice"
+                android:fillColor="@color/colorSurprise"
+                android:pathData="@string/p_surprise_slice" />
+            <path
+                android:name="surprise_word"
+                android:fillColor="#FFFFFF"
+                android:pathData="@string/surprise_word" />
+        </group>
+        <group
+            android:name="fear"
+            android:pivotX="@string/pivot_X"
+            android:pivotY="@string/pivot_Y" >
+            <path
+                android:name="fear_slice"
+                android:fillColor="@color/colorFear"
+                android:pathData="@string/p_fear_slice" />
+            <path
+                android:name="fear_word"
+                android:fillColor="#FFFFFF"
+                android:pathData="@string/fear_word" />
+        </group>
+        <group
+            android:name="credits"
+            android:pivotX="@string/pivot_X"
+            android:pivotY="@string/pivot_Y" >
+            <path
+                android:name="credits_circle"
+                android:fillColor="@color/colorCredits"
+                android:pathData="@string/p_credits_circle" />
+        </group>
+
+    </group>
+</vector>

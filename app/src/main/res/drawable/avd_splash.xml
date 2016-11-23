@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/pie">
+    <target
+        android:animation="@animator/r_neg120_0"
+        android:name="whole" />
+    <target
+        android:animation="@animator/partial_shrink_in"
+        android:name="whole" />
+    <target
+        android:animation="@animator/whole_fade_in"
+        android:name="pieWhole" />
+</animated-vector>

@@ -1,0 +1,62 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/pie" >
+    
+    <target
+        android:name="anger"
+        android:animation="@animator/rotate_240" />
+    <target
+        android:name="disgust"
+        android:animation="@animator/rotate_240" />
+    <target
+        android:name="sadness"
+        android:animation="@animator/rotate_240" />
+    <target
+        android:name="happiness"
+        android:animation="@animator/rotate_240" />
+    <target
+        android:name="surprise"
+        android:animation="@animator/rotate_240" />
+    <target
+        android:name="fear"
+        android:animation="@animator/rotate_240" />
+
+    <target
+        android:name="disgust_slice"
+        android:animation="@animator/fade_out" />
+    <target
+        android:name="sadness_slice"
+        android:animation="@animator/fade_out" />
+    <target
+        android:name="happiness_slice"
+        android:animation="@animator/fade_out" />
+    <target
+        android:name="surprise_slice"
+        android:animation="@animator/fade_out" />
+    <target
+        android:name="anger_slice"
+        android:animation="@animator/fade_out" />
+
+    <target
+        android:name="anger_word"
+        android:animation="@animator/fade_out" />
+    <target
+        android:name="disgust_word"
+        android:animation="@animator/fade_out" />
+    <target
+        android:name="sadness_word"
+        android:animation="@animator/fade_out" />
+    <target
+        android:name="happiness_word"
+        android:animation="@animator/fade_out" />
+    <target
+        android:name="surprise_word"
+        android:animation="@animator/fade_out" />
+    <target
+        android:name="fear_word"
+        android:animation="@animator/fade_out" />
+
+    <target
+        android:name="credits"
+        android:animation="@animator/shrink_out" />
+
+</animated-vector>

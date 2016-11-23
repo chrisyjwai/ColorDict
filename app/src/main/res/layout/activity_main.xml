@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.skwear.colordict.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splashGroup">
+
+        <ImageView
+            android:layout_width="80dp"
+            app:srcCompat="@drawable/avd_back_splash"
+            android:id="@+id/back_circle_splash"
+            android:adjustViewBounds="true"
+            android:layout_height="80dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/avd_splash"
+            android:id="@+id/splash" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pieGroup"
+        android:visibility="gone">
+
+        <com.skwear.colordict.RadialMenu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/pie"
+            android:id="@+id/pieView" />
+
+        <ImageView
+            android:layout_width="80dp"
+            app:srcCompat="@drawable/avd_back_shrinkout"
+            android:id="@+id/back_circle_view"
+            android:adjustViewBounds="true"
+            android:layout_height="80dp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pieAnim"
+        android:visibility="gone">
+
+        <com.skwear.colordict.PieAnimView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/pie"
+            android:id="@+id/pieAnimView" />
+
+        <ImageView
+            android:layout_width="80dp"
+            app:srcCompat="@drawable/avd_back_shrinkout"
+            android:id="@+id/backAnimArrowView"
+            android:adjustViewBounds="true"
+            android:layout_height="80dp" />
+
+    </FrameLayout>
+
+
+</FrameLayout>
