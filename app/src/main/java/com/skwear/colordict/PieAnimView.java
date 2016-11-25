@@ -9,6 +9,9 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 /**
@@ -26,11 +29,11 @@ public class PieAnimView extends AppCompatImageView {
     private Drawable sadnessAnim;
     private Drawable disgustAnim;
 
-    Handler handler = new Handler();
+    private FrameLayout pieAnim;
 
-    public PieAnimView(Context context) {
-        this(context, null);
-    }
+    private Slice slicePicked;
+
+    Handler handler = new Handler();
 
     public PieAnimView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
@@ -45,43 +48,76 @@ public class PieAnimView extends AppCompatImageView {
         disgustAnim = ContextCompat.getDrawable(context, R.drawable.avd_disgust);
     }
 
+/* NOT NEEDED, BUT KEEP JUST IN CASE
+    public PieAnimView(Context context) {
+        this(context, null);
+    }
+*/
+
+/* NOT NEEDED, BUT KEEP JUST IN CASE
     @Override
     public void onSizeChanged(int w, int h, int oldw, int oldh){
         super.onSizeChanged(w, h, oldw, oldh);
     }
+*/
 
+/* NOT NEEDED, BUT KEEP JUST IN CASE
     @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+    }
+*/
 
-        //TODO radialMenu.getSlicePicked right here
+    @Override
+    public void onVisibilityChanged(View changedView, int visibility) {
+        //super.onVisibilityChanged(pieAnim, VISIBLE);
 
-        Log.d("CREATION", "5");
-        /*if(Pick.getInstance().getSlicePicked() == Slice.ANGER) {
-            Log.d("CREATION", "anger2");
-        }*/
+        slicePicked = Pick.getInstance().getSlicePicked();
 
-        switch (Pick.getInstance().getSlicePicked()) {
-            case ANGER: { setImageDrawable(angerAnim); }
-            case FEAR: { setImageDrawable(fearAnim); }
-            case SURPRISE: { setImageDrawable(surpriseAnim); }
-            case HAPPINESS: { setImageDrawable(happinessAnim); }
-            case SADNESS: { setImageDrawable(sadnessAnim); }
-            case DISGUST: { setImageDrawable(disgustAnim); }
+        if (visibility == VISIBLE) {
+            if(slicePicked == Slice.ANGER) {
+                Log.d("CREATION", "anger");
+                setImageDrawable(angerAnim);
+            }
+            if(slicePicked == Slice.FEAR) {
+                Log.d("CREATION", "fear");
+                setImageDrawable(fearAnim);
+            }
+            if(slicePicked == Slice.SURPRISE) {
+                Log.d("CREATION", "surprise");
+                setImageDrawable(surpriseAnim);
+            }
+            if(slicePicked == Slice.HAPPINESS) {
+                Log.d("CREATION", "happiness");
+                setImageDrawable(happinessAnim);
+            }
+            if(slicePicked == Slice.SADNESS) {
+                Log.d("CREATION", "sadness");
+                setImageDrawable(sadnessAnim);
+            }
+            if(slicePicked == Slice.DISGUST) {
+                Log.d("CREATION", "disgust");
+                setImageDrawable(disgustAnim);
+            }
+
+            PieRotate();
+            Log.d("CREATION", "Animation() called");
         }
-
-        Animation();
     }
 
     public void setBackView(ImageView bv) {
         backView = bv;
     }
 
-    public void Animation() {
+    public void setPieAnim(FrameLayout pa) {
+        pieAnim = pa;
+    }
+
+    public void PieRotate() {
         AVDWrapper.Callback callback = new AVDWrapper.Callback() {
             @Override
             public void onAnimationDone() {
-                //TODO pie animation after action
+                //TODO set slice inflate drawable and call SliceInflate()
             }
         };
 
@@ -89,6 +125,22 @@ public class PieAnimView extends AppCompatImageView {
         Animatable animback = (Animatable) backView.getDrawable();
 
         AVDWrapper avdWrapper = new AVDWrapper(handler, callback, anim, animback);
+        avdWrapper.start(getResources().getInteger(R.integer.animation_duration));
+    }
+
+    public void SliceInflate() {
+        AVDWrapper.Callback callback = new AVDWrapper.Callback() {
+            @Override
+            public void onAnimationDone() {
+                //TODO layout gone and set next viewgroup visible
+            }
+        };
+
+        Animatable anim = (Animatable) getDrawable();
+
+        Animatable animaback = (Animatable) backView.getDrawable();
+
+        AVDWrapper avdWrapper = new AVDWrapper(handler, callback, anim, animaback);
         avdWrapper.start(getResources().getInteger(R.integer.animation_duration));
     }
 }
