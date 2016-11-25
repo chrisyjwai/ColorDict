@@ -7,25 +7,27 @@
     android:layout_height="match_parent"
     tools:context="com.skwear.colordict.MainActivity">
 
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/splashGroup">
+        android:id="@+id/pieAnim"
+        android:visibility="gone">
+
+        <com.skwear.colordict.PieAnimView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/pie"
+            android:id="@+id/pieAnimView" />
 
         <ImageView
             android:layout_width="80dp"
-            app:srcCompat="@drawable/avd_back_splash"
-            android:id="@+id/back_circle_splash"
+            app:srcCompat="@drawable/avd_back_shrinkout"
+            android:id="@+id/backAnimArrowView"
             android:adjustViewBounds="true"
             android:layout_height="80dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/avd_splash"
-            android:id="@+id/splash" />
 
     </FrameLayout>
 
@@ -55,25 +57,39 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/pieAnim"
-        android:visibility="gone">
-
-        <com.skwear.colordict.PieAnimView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:adjustViewBounds="true"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/pie"
-            android:id="@+id/pieAnimView" />
+        android:id="@+id/splashGroup">
 
         <ImageView
             android:layout_width="80dp"
-            app:srcCompat="@drawable/avd_back_shrinkout"
-            android:id="@+id/backAnimArrowView"
+            app:srcCompat="@drawable/avd_back_splash"
+            android:id="@+id/back_circle_splash"
             android:adjustViewBounds="true"
             android:layout_height="80dp" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/avd_splash"
+            android:id="@+id/splash" />
+
     </FrameLayout>
+
+    <!--    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/left_slice"
+        android:id="@+id/imageView2"
+        android:scaleType="fitXY" />-->
+
+<!--    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/rectangle"
+        android:id="@+id/imageView3"
+        android:adjustViewBounds="false"
+        android:scaleType="fitXY" />-->
 
 
 </FrameLayout>
