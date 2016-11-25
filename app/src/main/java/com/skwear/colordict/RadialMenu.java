@@ -31,14 +31,19 @@ public class RadialMenu extends AppCompatImageView {
         //Log.d("CREATION","created");
     }
 
+/* NOT NEEDED, BUT KEEP JUST IN CASE
     public RadialMenu(Context context) {
         this(context, null);
     }
+*/
 
+/* NOT NEEDED, BUT KEEP JUST IN CASE
     @Override
     public void onSizeChanged(int w, int h, int oldw, int oldh){
         super.onSizeChanged(w, h, oldw, oldh);
     }
+*/
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         //Log.d("CREATION","touch");
@@ -89,11 +94,11 @@ public class RadialMenu extends AppCompatImageView {
                 //TODO About box for center credits button
             }
             //TODO pass to pie anim view
-            Log.d("CREATION", "1");
+            //Log.d("CREATION", "1");
             pie.setVisibility(ViewGroup.GONE);
-            Log.d("CREATION", "2");
+            //Log.d("CREATION", "2");
             pieAnim.setVisibility(ViewGroup.VISIBLE);
-            Log.d("CREATION", "3");
+            //Log.d("CREATION", "3");
         }
         return true;
     }
@@ -105,7 +110,7 @@ public class RadialMenu extends AppCompatImageView {
         innerR = (11f / 96f) * getWidth();
         outerR = (43f / 96f) * getWidth();
         centerR = (1f / 12f) * getWidth();
-        Log.d("CREATION", "drawn");
+        //Log.d("CREATION", "drawn");
         super.onDraw(canvas);
     }
 
