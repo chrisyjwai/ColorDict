@@ -114,10 +114,7 @@ public class MainActivity extends AppCompatActivity {
     private void Init() {
         /*------------------------------------------------------------------------------------------
                                        Initializations
-
         ------------------------------------------------------------------------------------------*/
-
-        //------------------------------------------------------------------------------------------
         splash = (FrameLayout) findViewById(R.id.splashGroup);
 
         splashpie = (ImageView) findViewById(R.id.splash);
@@ -142,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
         radialMenu.setPieAnim(pieAnim);
         radialMenu.setPie(pie);
         //------------------------------------------------------------------------------------------
+        pieAnimView.setPieAnim(pieAnim);
         pieAnimView.setBackView(backAnimArrowView);
 
 
