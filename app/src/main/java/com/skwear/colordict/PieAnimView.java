@@ -1,6 +1,7 @@
 package com.skwear.colordict;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
@@ -35,16 +36,34 @@ public class PieAnimView extends AppCompatImageView {
 
     private Slice slicePicked;
 
-    private long i = 0;
+    private float i = 0f;
     private float f;
     private long starttime;
     private int animdura = 1000;
     private float frate = 60f;
-    private float tpf = 1000f / frate; //time per frame milliseconds
+    private float tpf = 1000f / frate; //time per frame in milliseconds
     private boolean animstarted = false;
     private Path p = new Path();
     private Paint pnt = new Paint();
     private boolean rotatedone = false;
+    private float len;
+
+    private float originX;
+    private float originY;
+
+    private float innerR;
+    private float outerR;
+
+    private float deg2Rad = (float)Math.PI / 180f;
+    private float innerArc = 44.37388215f * deg2Rad;
+    //private float outerArc = 56.00261914f * deg2Rad;
+
+    private int angerCol;
+    private int fearCol;
+    private int surpriseCol;
+    private int happinessCol;
+    private int sadnessCol;
+    private int disgustCol;
 
     Handler handler = new Handler();
 
@@ -59,6 +78,15 @@ public class PieAnimView extends AppCompatImageView {
         happinessAnim = ContextCompat.getDrawable(context, R.drawable.avd_happiness);
         sadnessAnim = ContextCompat.getDrawable(context, R.drawable.avd_sadness);
         disgustAnim = ContextCompat.getDrawable(context, R.drawable.avd_disgust);
+
+        angerCol = ContextCompat.getColor(context, R.color.colorAnger);
+        fearCol = ContextCompat.getColor(context, R.color.colorFear);
+        surpriseCol = ContextCompat.getColor(context, R.color.colorSurprise);
+        happinessCol = ContextCompat.getColor(context, R.color.colorHappiness);
+        sadnessCol = ContextCompat.getColor(context, R.color.colorSadness);
+        disgustCol = ContextCompat.getColor(context, R.color.colorDisgust);
+
+        pnt.setStyle(Paint.Style.FILL);
     }
 
 /* NOT NEEDED, BUT KEEP JUST IN CASE
@@ -67,37 +95,77 @@ public class PieAnimView extends AppCompatImageView {
     }
 */
 
-/* NOT NEEDED, BUT KEEP JUST IN CASE
     @Override
     public void onSizeChanged(int w, int h, int oldw, int oldh){
         super.onSizeChanged(w, h, oldw, oldh);
-    }
-*/
 
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            len = getWidth();
+        }
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            len = getHeight();
+        }
+
+        originX = getWidth() / 2f;
+        originY = getHeight() / 2f;
+
+        innerR = (11f / 96f) * len;
+        outerR = (43f / 96f) * len;
+    }
 
     @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        Log.d("CREATION", "draw");
 
         if (rotatedone == true) {
             if (animstarted == false) {
                 starttime = System.currentTimeMillis();
                 animstarted = true;
             }
+            if (i * tpf < animdura) {
+                i = (System.currentTimeMillis() - starttime) / tpf;
 
-            i = (long)((System.currentTimeMillis() - starttime) / tpf);
+                f = (float)(Math.cos((((i * tpf) / animdura) + 1f) * Math.PI) / 2.0f) + 0.5f;
 
-            //TODO check if casts are redundant
-            f = (float)(Math.cos((((float)i / 60f) + 1f) * Math.PI) / 2.0f) + 0.5f;
+                //TODO draw paths
+                p.moveTo(
+                        originX - innerR * (float)Math.cos(innerArc / 2f),
+                        originY - innerR * (float)Math.sin(innerArc / 2f)
+                );
+                p.lineTo(
+                        -0.2887070542f * len,
+                        -0.1666853333f * len
+                );
+                p.rCubicTo(
+                        -0.0699127073f * len,
+                        0.1314794291f * len,
+                        -0.0699127073f * len,
+                        0.2884399916f * len,
+                        0f,
+                        0.4199194206f * len
+                );
+                p.rLineTo(
+                        0.2890419604f * len,
+                        0.1668784583f * len
+                );
+                p.rCubicTo(
+                        -0.0113121741f * len,
+                        -0.0277377063f * len,
+                        -0.0113121741f * len,
+                        -0.0586179355f * len,
+                        0f,
+                        -0.0863556418f * len
+                );
+                p.close();
 
-            //TODO draw paths
+                canvas.drawPath(p, pnt);
 
+                invalidate();
+                Log.d("CREATION", "path drawn");
 
-            canvas.drawPath();
-
-            invalidate();
-
-            p.rewind();
+                p.rewind();
+            }
         }
     }
 
@@ -111,33 +179,33 @@ public class PieAnimView extends AppCompatImageView {
         if (visibility == VISIBLE) {
             if(slicePicked == Slice.ANGER) {
                 Log.d("CREATION", "anger");
-                tImageDrawable(angerAnim);
-                //TODO set paint color
+                setImageDrawable(angerAnim);
+                pnt.setColor(angerCol);
             }
             if(slicePicked == Slice.FEAR) {
                 Log.d("CREATION", "fear");
                 setImageDrawable(fearAnim);
-                //TODO set paint color
+                pnt.setColor(fearCol);
             }
             if(slicePicked == Slice.SURPRISE) {
                 Log.d("CREATION", "surprise");
                 setImageDrawable(surpriseAnim);
-                //TODO set paint color
+                pnt.setColor(surpriseCol);
             }
             if(slicePicked == Slice.HAPPINESS) {
                 Log.d("CREATION", "happiness");
                 setImageDrawable(happinessAnim);
-                //TODO set paint color
+                pnt.setColor(happinessCol);
             }
             if(slicePicked == Slice.SADNESS) {
                 Log.d("CREATION", "sadness");
                 setImageDrawable(sadnessAnim);
-                //TODO set paint color
+                pnt.setColor(sadnessCol);
             }
             if(slicePicked == Slice.DISGUST) {
                 Log.d("CREATION", "disgust");
                 setImageDrawable(disgustAnim);
-                //TODO set paint color
+                pnt.setColor(disgustCol);
             }
 
             //TODO set path internal structure or default path
@@ -159,7 +227,8 @@ public class PieAnimView extends AppCompatImageView {
         AVDWrapper.Callback callback = new AVDWrapper.Callback() {
             @Override
             public void onAnimationDone() {
-                //TODO set slice inflate drawable and call SliceInflate()
+                rotatedone = true;
+                //invalidate();
             }
         };
 
@@ -167,22 +236,6 @@ public class PieAnimView extends AppCompatImageView {
         Animatable animback = (Animatable) backView.getDrawable();
 
         AVDWrapper avdWrapper = new AVDWrapper(handler, callback, anim, animback);
-        avdWrapper.start(getResources().getInteger(R.integer.animation_duration));
-    }
-
-    public void SliceInflate() {
-        AVDWrapper.Callback callback = new AVDWrapper.Callback() {
-            @Override
-            public void onAnimationDone() {
-                //TODO layout gone and set next viewgroup visible
-            }
-        };
-
-        Animatable anim = (Animatable) getDrawable();
-
-        Animatable animaback = (Animatable) backView.getDrawable();
-
-        AVDWrapper avdWrapper = new AVDWrapper(handler, callback, anim, animaback);
         avdWrapper.start(getResources().getInteger(R.integer.animation_duration));
     }
 }
