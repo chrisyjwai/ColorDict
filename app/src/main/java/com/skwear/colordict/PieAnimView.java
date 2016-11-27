@@ -2,6 +2,8 @@ package com.skwear.colordict;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
@@ -33,6 +35,17 @@ public class PieAnimView extends AppCompatImageView {
 
     private Slice slicePicked;
 
+    private long i = 0;
+    private float f;
+    private long starttime;
+    private int animdura = 1000;
+    private float frate = 60f;
+    private float tpf = 1000f / frate; //time per frame milliseconds
+    private boolean animstarted = false;
+    private Path p = new Path();
+    private Paint pnt = new Paint();
+    private boolean rotatedone = false;
+
     Handler handler = new Handler();
 
     public PieAnimView(Context context, AttributeSet attributeSet) {
@@ -61,12 +74,33 @@ public class PieAnimView extends AppCompatImageView {
     }
 */
 
-/* NOT NEEDED, BUT KEEP JUST IN CASE
+
     @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
+        if (rotatedone == true) {
+            if (animstarted == false) {
+                starttime = System.currentTimeMillis();
+                animstarted = true;
+            }
+
+            i = (long)((System.currentTimeMillis() - starttime) / tpf);
+
+            //TODO check if casts are redundant
+            f = (float)(Math.cos((((float)i / 60f) + 1f) * Math.PI) / 2.0f) + 0.5f;
+
+            //TODO draw paths
+
+
+            canvas.drawPath();
+
+            invalidate();
+
+            p.rewind();
+        }
     }
-*/
+
 
     @Override
     public void onVisibilityChanged(View changedView, int visibility) {
@@ -77,28 +111,36 @@ public class PieAnimView extends AppCompatImageView {
         if (visibility == VISIBLE) {
             if(slicePicked == Slice.ANGER) {
                 Log.d("CREATION", "anger");
-                setImageDrawable(angerAnim);
+                tImageDrawable(angerAnim);
+                //TODO set paint color
             }
             if(slicePicked == Slice.FEAR) {
                 Log.d("CREATION", "fear");
                 setImageDrawable(fearAnim);
+                //TODO set paint color
             }
             if(slicePicked == Slice.SURPRISE) {
                 Log.d("CREATION", "surprise");
                 setImageDrawable(surpriseAnim);
+                //TODO set paint color
             }
             if(slicePicked == Slice.HAPPINESS) {
                 Log.d("CREATION", "happiness");
                 setImageDrawable(happinessAnim);
+                //TODO set paint color
             }
             if(slicePicked == Slice.SADNESS) {
                 Log.d("CREATION", "sadness");
                 setImageDrawable(sadnessAnim);
+                //TODO set paint color
             }
             if(slicePicked == Slice.DISGUST) {
                 Log.d("CREATION", "disgust");
                 setImageDrawable(disgustAnim);
+                //TODO set paint color
             }
+
+            //TODO set path internal structure or default path
 
             PieRotate();
             Log.d("CREATION", "Animation() called");
