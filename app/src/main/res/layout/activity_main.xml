@@ -75,21 +75,14 @@
             android:id="@+id/splash" />
 
     </FrameLayout>
+<!--
 
-    <!--    <ImageView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/left_slice"
         android:id="@+id/imageView2"
-        android:scaleType="fitXY" />-->
-
-<!--    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/rectangle"
-        android:id="@+id/imageView3"
-        android:adjustViewBounds="false"
-        android:scaleType="fitXY" />-->
+        app:srcCompat="@drawable/pie" />
+-->
 
 
 </FrameLayout>
