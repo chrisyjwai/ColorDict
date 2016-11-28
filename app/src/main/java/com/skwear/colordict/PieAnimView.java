@@ -39,7 +39,7 @@ public class PieAnimView extends AppCompatImageView {
     private float i = 0f;
     private float f;
     private long starttime;
-    private int animdura = 1000;
+    private int animdura = 10000;
     private float frate = 60f;
     private float tpf = 1000f / frate; //time per frame in milliseconds
     private boolean animstarted = false;
@@ -47,12 +47,13 @@ public class PieAnimView extends AppCompatImageView {
     private Paint pnt = new Paint();
     private boolean rotatedone = false;
     private float len;
+    private float hei;
 
     private float originX;
     private float originY;
 
-    private float innerR;
-    private float outerR;
+//    private float innerR;
+//    private float outerR;
 
     private float deg2Rad = (float)Math.PI / 180f;
     private float innerArc = 44.37388215f * deg2Rad;
@@ -101,16 +102,18 @@ public class PieAnimView extends AppCompatImageView {
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             len = getWidth();
+            hei = getHeight();
         }
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             len = getHeight();
+            hei = getHeight();
         }
 
-        originX = getWidth() / 2f;
-        originY = getHeight() / 2f;
+        originX =  len / 2f;
+        originY =  hei / 2f;
 
-        innerR = (11f / 96f) * len;
-        outerR = (43f / 96f) * len;
+//        innerR = (11f / 96f) * len;
+//        outerR = (43f / 96f) * len;
     }
 
     @Override
@@ -130,32 +133,37 @@ public class PieAnimView extends AppCompatImageView {
 
                 //TODO draw paths
                 p.moveTo(
-                        originX - innerR * (float)Math.cos(innerArc / 2f),
-                        originY - innerR * (float)Math.sin(innerArc / 2f)
+                        ((originX + (-0.10607121f * len)) * (1f - f))
+                                + ((originX + (-0.02083333f * len)) * f),
+                        ((originY + (-0.04319825f * len)) * (1f - f)) + ((0.04166667f * len) * f)
                 );
                 p.lineTo(
-                        -0.2887070542f * len,
-                        -0.1666853333f * len
+                        ((originX + (-0.39477826f * len)) * (1f - f)) + ((0.04166667f * len) * f),
+                        ((originY + (-0.20988358f * len)) * (1f - f)) + ((0.04166667f * len) * f)
                 );
-                p.rCubicTo(
-                        -0.0699127073f * len,
-                        0.1314794291f * len,
-                        -0.0699127073f * len,
-                        0.2884399916f * len,
-                        0f,
-                        0.4199194206f * len
+                p.cubicTo(
+                        ((originX + (-0.46469098f * len)) * (1f - f)) + ((0.04166667f * len) * f),
+                        ((originY + (-0.07840415f * len)) * (1f - f)) + ((0.34722222f * hei) * f),
+                        ((originX + (-0.46495548f * len)) * (1f - f)) + ((0.04166667f * len) * f),
+                        ((originY + (0.07855642f * len)) * (1f - f)) + ((0.65277778f * hei) * f),
+                        ((originX + (-0.39504277f * len)) * (1f - f)) + ((0.04166667f * len) * f),
+                        ((originY + (0.21003585f * len)) * (1f - f)) + ((0.95833333f * hei) * f)
                 );
-                p.rLineTo(
-                        0.2890419604f * len,
-                        0.1668784583f * len
+                p.lineTo(
+                        ((originX + (-0.10600081f * len)) * (1f - f))
+                                + ((originX + (-0.02083333f * len)) * f),
+                        ((originY + (0.04315740f * len)) * (1f - f)) + ((0.95833333f * hei) * f)
                 );
-                p.rCubicTo(
-                        -0.0113121741f * len,
-                        -0.0277377063f * len,
-                        -0.0113121741f * len,
-                        -0.0586179355f * len,
-                        0f,
-                        -0.0863556418f * len
+                p.cubicTo(
+                        ((originX + (-0.11731298f * len)) * (1f - f))
+                                + ((originX + (-0.02083333f * len)) * f),
+                        ((originY + (0.01541969f * len)) * (1f - f)) + ((0.95833333f * hei) * f),
+                        ((originX + (-0.11738338f * len)) * (1f - f))
+                                + ((originX + (-0.02083333f * len)) * f),
+                        ((originY + (-0.01546054f * len)) * (1f - f)) + ((0.65277778f * hei) * f),
+                        ((originX + (-0.10607121f * len)) * (1f - f))
+                                + ((originX + (-0.02083333f * len)) * f),
+                        ((originY + (-0.04319825f * len)) * (1f - f)) + ((0.34722222f * hei) * f)
                 );
                 p.close();
 
