@@ -8,6 +8,14 @@
     tools:context="com.skwear.colordict.MainActivity">
 
 
+<!--    <com.skwear.colordict.ScratchView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:id="@+id/scratchView" />-->
+
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -75,14 +83,5 @@
             android:id="@+id/splash" />
 
     </FrameLayout>
-
-<!--
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView2"
-        app:srcCompat="@drawable/pie" />
--->
-
 
 </FrameLayout>

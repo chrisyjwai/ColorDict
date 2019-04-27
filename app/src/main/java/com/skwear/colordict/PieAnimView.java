@@ -39,7 +39,7 @@ public class PieAnimView extends AppCompatImageView {
     private float i = 0f;
     private float f;
     private long starttime;
-    private int animdura = 10000;
+    private int animdura = 500;
     private float frate = 60f;
     private float tpf = 1000f / frate; //time per frame in milliseconds
     private boolean animstarted = false;
@@ -48,6 +48,8 @@ public class PieAnimView extends AppCompatImageView {
     private boolean rotatedone = false;
     private float len;
     private float hei;
+    private float rad;
+    private float margin = 30;
 
     private float originX;
     private float originY;
@@ -103,23 +105,22 @@ public class PieAnimView extends AppCompatImageView {
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             len = getWidth();
             hei = getHeight();
+            rad = getWidth();
         }
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            len = getHeight();
+            len = getWidth();
             hei = getHeight();
+            rad = getHeight();
         }
 
         originX =  len / 2f;
         originY =  hei / 2f;
-
-//        innerR = (11f / 96f) * len;
-//        outerR = (43f / 96f) * len;
     }
 
     @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Log.d("CREATION", "draw");
+        //Log.d("CREATION", "draw");
 
         if (rotatedone == true) {
             if (animstarted == false) {
@@ -131,48 +132,51 @@ public class PieAnimView extends AppCompatImageView {
 
                 f = (float)(Math.cos((((i * tpf) / animdura) + 1f) * Math.PI) / 2.0f) + 0.5f;
 
-                //TODO draw paths
                 p.moveTo(
-                        ((originX + (-0.10607121f * len)) * (1f - f))
-                                + ((originX + (-0.02083333f * len)) * f),
-                        ((originY + (-0.04319825f * len)) * (1f - f)) + ((0.04166667f * len) * f)
+                        ((originX + (-0.10607121f * rad)) * (1f - f))
+                                + ((originX - margin) * f),
+                        ((originY + (-0.04319825f * rad)) * (1f - f)) + (margin * f)
                 );
                 p.lineTo(
-                        ((originX + (-0.39477826f * len)) * (1f - f)) + ((0.04166667f * len) * f),
-                        ((originY + (-0.20988358f * len)) * (1f - f)) + ((0.04166667f * len) * f)
+                        ((originX + (-0.39477826f * rad)) * (1f - f)) + (margin * f),
+                        ((originY + (-0.20988358f * rad)) * (1f - f)) + (margin * f)
                 );
                 p.cubicTo(
-                        ((originX + (-0.46469098f * len)) * (1f - f)) + ((0.04166667f * len) * f),
-                        ((originY + (-0.07840415f * len)) * (1f - f)) + ((0.34722222f * hei) * f),
-                        ((originX + (-0.46495548f * len)) * (1f - f)) + ((0.04166667f * len) * f),
-                        ((originY + (0.07855642f * len)) * (1f - f)) + ((0.65277778f * hei) * f),
-                        ((originX + (-0.39504277f * len)) * (1f - f)) + ((0.04166667f * len) * f),
-                        ((originY + (0.21003585f * len)) * (1f - f)) + ((0.95833333f * hei) * f)
+                        ((originX + (-0.46469098f * rad)) * (1f - f)) + (margin * f),
+                        ((originY + (-0.07840415f * rad)) * (1f - f)) + ((originY - (0.15277778f * hei)) * f),
+                        ((originX + (-0.46495548f * rad)) * (1f - f)) + (margin * f),
+                        ((originY + (0.07855642f * rad)) * (1f - f)) + ((originY + (0.15277778f * hei)) * f),
+                        ((originX + (-0.39504277f * rad)) * (1f - f)) + (margin * f),
+                        ((originY + (0.21003585f * rad)) * (1f - f)) + (((1f * hei) - margin) * f)
                 );
                 p.lineTo(
-                        ((originX + (-0.10600081f * len)) * (1f - f))
-                                + ((originX + (-0.02083333f * len)) * f),
-                        ((originY + (0.04315740f * len)) * (1f - f)) + ((0.95833333f * hei) * f)
+                        ((originX + (-0.10600081f * rad)) * (1f - f))
+                                + ((originX - margin) * f),
+                        ((originY + (0.04315740f * rad)) * (1f - f)) + (((1f * hei) - margin) * f)
                 );
                 p.cubicTo(
-                        ((originX + (-0.11731298f * len)) * (1f - f))
-                                + ((originX + (-0.02083333f * len)) * f),
-                        ((originY + (0.01541969f * len)) * (1f - f)) + ((0.95833333f * hei) * f),
-                        ((originX + (-0.11738338f * len)) * (1f - f))
-                                + ((originX + (-0.02083333f * len)) * f),
-                        ((originY + (-0.01546054f * len)) * (1f - f)) + ((0.65277778f * hei) * f),
-                        ((originX + (-0.10607121f * len)) * (1f - f))
-                                + ((originX + (-0.02083333f * len)) * f),
-                        ((originY + (-0.04319825f * len)) * (1f - f)) + ((0.34722222f * hei) * f)
+                        ((originX + (-0.11731298f * rad)) * (1f - f))
+                                + ((originX - margin) * f),
+                        ((originY + (0.01541969f * rad)) * (1f - f)) + ((originY + (0.15277778f * hei)) * f),
+                        ((originX + (-0.11738338f * rad)) * (1f - f))
+                                + ((originX - margin) * f),
+                        ((originY + (-0.01546054f * rad)) * (1f - f)) + ((originY - (0.15277778f * hei)) * f),
+                        ((originX + (-0.10607121f * rad)) * (1f - f))
+                                + ((originX - margin) * f),
+                        ((originY + (-0.04319825f * rad)) * (1f - f)) + (margin * f)
                 );
                 p.close();
 
                 canvas.drawPath(p, pnt);
 
                 invalidate();
-                Log.d("CREATION", "path drawn");
+                //Log.d("CREATION", "path drawn");
 
                 p.rewind();
+            }
+            else {
+                //TODO call next view
+
             }
         }
     }
@@ -186,40 +190,38 @@ public class PieAnimView extends AppCompatImageView {
 
         if (visibility == VISIBLE) {
             if(slicePicked == Slice.ANGER) {
-                Log.d("CREATION", "anger");
+                //Log.d("CREATION", "anger");
                 setImageDrawable(angerAnim);
                 pnt.setColor(angerCol);
             }
             if(slicePicked == Slice.FEAR) {
-                Log.d("CREATION", "fear");
+                //Log.d("CREATION", "fear");
                 setImageDrawable(fearAnim);
                 pnt.setColor(fearCol);
             }
             if(slicePicked == Slice.SURPRISE) {
-                Log.d("CREATION", "surprise");
+                //Log.d("CREATION", "surprise");
                 setImageDrawable(surpriseAnim);
                 pnt.setColor(surpriseCol);
             }
             if(slicePicked == Slice.HAPPINESS) {
-                Log.d("CREATION", "happiness");
+                //Log.d("CREATION", "happiness");
                 setImageDrawable(happinessAnim);
                 pnt.setColor(happinessCol);
             }
             if(slicePicked == Slice.SADNESS) {
-                Log.d("CREATION", "sadness");
+                //Log.d("CREATION", "sadness");
                 setImageDrawable(sadnessAnim);
                 pnt.setColor(sadnessCol);
             }
             if(slicePicked == Slice.DISGUST) {
-                Log.d("CREATION", "disgust");
+                //Log.d("CREATION", "disgust");
                 setImageDrawable(disgustAnim);
                 pnt.setColor(disgustCol);
             }
 
-            //TODO set path internal structure or default path
-
             PieRotate();
-            Log.d("CREATION", "Animation() called");
+            //Log.d("CREATION", "Animation() called");
         }
     }
 
@@ -235,8 +237,9 @@ public class PieAnimView extends AppCompatImageView {
         AVDWrapper.Callback callback = new AVDWrapper.Callback() {
             @Override
             public void onAnimationDone() {
+                setImageResource(android.R.color.transparent);
                 rotatedone = true;
-                //invalidate();
+                invalidate();
             }
         };
 

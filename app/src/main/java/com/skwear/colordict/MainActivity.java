@@ -108,9 +108,6 @@ public class MainActivity extends AppCompatActivity {
         avdWrapper.start(getResources().getInteger(R.integer.animation_duration));
     }
 
-    //TODO method to set all the views and stuff
-    //TODO or make a singleton that holds all the instances of views
-
     private void Init() {
         /*------------------------------------------------------------------------------------------
                                        Initializations

@@ -1,0 +1,175 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="1920dp"
+    android:width="1080dp"
+    android:viewportHeight="2844.4444444444"
+    android:viewportWidth="1600" >
+
+    <group
+        android:name="right_pane_whole"
+        android:translateY="0" >
+        <group
+            android:name="dictionary_right_pane_1"
+            android:translateY="@string/subdefinition_pane_Y1" >
+            <path
+                android:name="dictionary_left_pane_path1"
+                android:fillColor="@color/colorDisgustSecond"
+                android:fillAlpha="1"
+                android:pathData="@string/subdefinition_path" />
+        </group>
+        <group
+            android:name="dictionary_right_pane_2"
+            android:translateY="@string/subdefinition_pane_Y2" >
+            <path
+                android:name="dictionary_left_pane_path2"
+                android:fillColor="@color/colorDisgustSecond"
+                android:fillAlpha="1"
+                android:pathData="@string/subdefinition_path" />
+        </group>
+        <group
+            android:name="dictionary_right_pane_3"
+            android:translateY="@string/subdefinition_pane_Y3" >
+            <path
+                android:name="dictionary_left_pane_path3"
+                android:fillColor="@color/colorDisgustSecond"
+                android:fillAlpha="1"
+                android:pathData="@string/subdefinition_path" />
+        </group>
+        <group
+            android:name="dictionary_right_pane_4"
+            android:translateY="@string/subdefinition_pane_Y4" >
+            <path
+                android:name="dictionary_left_pane_path4"
+                android:fillColor="@color/colorDisgustSecond"
+                android:fillAlpha="1"
+                android:pathData="@string/subdefinition_path" />
+        </group>
+        <group
+            android:name="dictionary_right_pane_5"
+            android:translateY="@string/subdefinition_pane_Y5" >
+            <path
+                android:name="dictionary_left_pane_path5"
+                android:fillColor="@color/colorDisgustSecond"
+                android:fillAlpha="1"
+                android:pathData="@string/subdefinition_path" />
+        </group>
+        <group
+            android:name="dictionary_right_pane_6"
+            android:translateY="@string/subdefinition_pane_Y6" >
+            <path
+                android:name="dictionary_left_pane_path6"
+                android:fillColor="@color/colorDisgustSecond"
+                android:fillAlpha="1"
+                android:pathData="@string/subdefinition_path" />
+        </group>
+        <group
+            android:name="dictionary_right_pane_7"
+            android:translateY="@string/subdefinition_pane_Y7" >
+            <path
+                android:name="dictionary_left_pane_path7"
+                android:fillColor="@color/colorDisgustSecond"
+                android:fillAlpha="1"
+                android:pathData="@string/subdefinition_path" />
+        </group>
+        <group
+            android:name="dictionary_right_pane_8"
+            android:translateY="@string/subdefinition_pane_Y8" >
+            <path
+                android:name="dictionary_left_pane_path8"
+                android:fillColor="@color/colorDisgustSecond"
+                android:fillAlpha="1"
+                android:pathData="@string/subdefinition_path" />
+        </group>
+    </group>
+
+
+    <group
+        android:name="anger"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:rotation="120" >
+        <path
+            android:name="anger_slice"
+            android:fillColor="@color/colorAnger"
+            android:fillAlpha="0"
+            android:pathData="@string/path_slice_move_out" />
+    </group>
+    <group
+        android:name="disgust"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:rotation="180" >
+        <path
+            android:name="disgust_slice"
+            android:fillColor="@color/colorDisgust"
+            android:fillAlpha="1"
+            android:pathData="@string/word_definition_background" />
+    </group>
+    <group
+        android:name="sadness"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:rotation="240" >
+        <path
+            android:name="sadness_slice"
+            android:fillColor="@color/colorSadness"
+            android:fillAlpha="0"
+            android:pathData="@string/path_slice_move_out" />
+    </group>
+    <group
+        android:name="happiness"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:rotation="300" >
+        <path
+            android:name="happiness_slice"
+            android:fillColor="@color/colorHappiness"
+            android:fillAlpha="0"
+            android:pathData="@string/path_slice_move_out" />
+    </group>
+    <group
+        android:name="surprise"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:rotation="360" >
+        <path
+            android:name="surprise_slice"
+            android:fillColor="@color/colorSurprise"
+            android:fillAlpha="0"
+            android:pathData="@string/path_slice_move_out" />
+    </group>
+    <group
+        android:name="fear"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:rotation="420" >
+        <path
+            android:name="fear_slice"
+            android:fillColor="@color/colorFear"
+            android:fillAlpha="0"
+            android:pathData="@string/path_slice_move_out" />
+    </group>
+    <group
+        android:name="credits"
+        android:pivotX="@string/pivot_X"
+        android:pivotY="@string/pivot_Y"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:rotation="0" >
+        <path
+            android:name="top_credits"
+            android:fillColor="@color/colorCredits"
+            android:pathData="M 650,1422.222222222222 a150,150 0 0 1 300,0z " />
+        <path
+            android:name="bottom_credits"
+            android:fillColor="@color/colorCredits"
+            android:pathData="M 650,1422.222222222222 a150,150 0 0 0 300,0z " />
+        <path
+            android:name="right_credits"
+            android:fillColor="@color/colorCredits"
+            android:pathData="M 800,1272.222222222222 a150,150 0 0 1 0,300z " />
+        <path
+            android:name="left_credits"
+            android:fillColor="@color/colorCredits"
+            android:pathData="M 800,1272.222222222222 a150,150 0 0 0 0,300z " />
+    </group>
+</vector>

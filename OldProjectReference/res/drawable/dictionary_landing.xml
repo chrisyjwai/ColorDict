@@ -1,0 +1,109 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="1920dp"
+    android:width="1080dp"
+    android:viewportHeight="2844.4444444444"
+    android:viewportWidth="1600" >
+
+    <!--
+    <group
+        android:name="dictionary_left_pane"
+        android:translateX="-775" >
+        <path
+            android:name="dictionary_left_pane_path"
+            android:fillColor="@color/colorIconBackground"
+            android:pathData="@string/word_definition_background" />
+    </group>
+    -->
+
+    <group
+        android:name="dictionary_right_pane_1"
+        android:translateY="@string/subdefinition_pane_Y1" >
+        <path
+            android:name="dictionary_left_pane_path1"
+            android:fillColor="@color/colorIconBackground"
+            android:fillAlpha="0"
+            android:pathData="@string/subdefinition_path" />
+    </group>
+    <group
+        android:name="dictionary_right_pane_2"
+        android:translateY="@string/subdefinition_pane_Y2" >
+        <path
+            android:name="dictionary_left_pane_path"
+            android:fillColor="@color/colorIconBackground"
+            android:fillAlpha="0"
+            android:pathData="@string/subdefinition_path" />
+    </group>
+    <group
+        android:name="dictionary_right_pane_3"
+        android:translateY="@string/subdefinition_pane_Y3" >
+        <path
+            android:name="dictionary_left_pane_path"
+            android:fillColor="@color/colorIconBackground"
+            android:fillAlpha="0"
+            android:pathData="@string/subdefinition_path" />
+    </group>
+    <group
+        android:name="dictionary_right_pane_4"
+        android:translateY="@string/subdefinition_pane_Y4" >
+        <path
+            android:name="dictionary_left_pane_path"
+            android:fillColor="@color/colorIconBackground"
+            android:fillAlpha="0"
+            android:pathData="@string/subdefinition_path" />
+    </group>
+    <group
+        android:name="dictionary_right_pane_5"
+        android:translateY="@string/subdefinition_pane_Y5" >
+        <path
+            android:name="dictionary_left_pane_path"
+            android:fillColor="@color/colorIconBackground"
+            android:fillAlpha="0"
+            android:pathData="@string/subdefinition_path" />
+    </group>
+    <group
+        android:name="dictionary_right_pane_6"
+        android:translateY="@string/subdefinition_pane_Y6" >
+        <path
+            android:name="dictionary_left_pane_path"
+            android:fillColor="@color/colorIconBackground"
+            android:fillAlpha="0"
+            android:pathData="@string/subdefinition_path" />
+    </group>
+    <group
+        android:name="dictionary_right_pane_7"
+        android:translateY="@string/subdefinition_pane_Y7" >
+        <path
+            android:name="dictionary_left_pane_path"
+            android:fillColor="@color/colorIconBackground"
+            android:fillAlpha="0"
+            android:pathData="@string/subdefinition_path" />
+    </group>
+    <group
+        android:name="dictionary_right_pane_8"
+        android:translateY="@string/subdefinition_pane_Y8" >
+        <path
+            android:name="dictionary_left_pane_path"
+            android:fillColor="@color/colorIconBackground"
+            android:fillAlpha="0"
+            android:pathData="@string/subdefinition_path" />
+    </group>
+    <group
+        android:name="dictionary_right_pane_9"
+        android:translateY="@string/subdefinition_pane_Y9" >
+        <path
+            android:name="dictionary_left_pane_path"
+            android:fillColor="@color/colorIconBackground"
+            android:fillAlpha="0"
+            android:pathData="@string/subdefinition_path" />
+    </group>
+    <group
+        android:name="dictionary_right_pane_10"
+        android:translateY="@string/subdefinition_pane_Y10" >
+        <path
+            android:name="dictionary_left_pane_path"
+            android:fillColor="@color/colorIconBackground"
+            android:fillAlpha="0"
+            android:pathData="@string/subdefinition_path" />
+    </group>
+
+</vector>

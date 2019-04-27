@@ -40,7 +40,7 @@ public class ScratchView extends AppCompatImageView {
             hei = getHeight();
         }
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            len = getHeight();
+            len = getWidth();
             hei = getHeight();
         }
 
@@ -56,33 +56,65 @@ public class ScratchView extends AppCompatImageView {
         super.onDraw(canvas);
         Log.d("CREATION", "draw");
 
+        float margin = 30;
+
+/*        p.moveTo(
+                originX - margin,
+                margin
+        );
+        p.lineTo(
+                margin,
+                margin
+        );
+        p.cubicTo(
+                margin,
+                (0.34722222f * hei),
+                margin,
+                (0.65277778f * hei),
+                margin,
+                ((1f * hei) - margin)
+        );
+        p.lineTo(
+                originX - margin,
+                ((1f * hei) - margin)
+        );
+        p.cubicTo(
+                originX - margin,
+                (0.65277778f * hei),
+                originX - margin,
+                (0.34722222f * hei),
+                originX - margin,
+                margin
+        );
+        p.close();*/
+
         p.moveTo(
-                originX + (-0.02083333f * len),
-                ((0.04166667f * len))
+                originX - margin,
+                margin
         );
         p.lineTo(
-                ((0.04166667f * len)),
-                ((0.04166667f * len))
+                margin,
+                margin
         );
         p.cubicTo(
-                ((0.04166667f * len),
-                ((0.34722222f * hei),
-                ((0.04166667f * len),
-                (0.65277778f * hei)
-                ((0.04166667f * len),
-                (0.95833333f * hei)
+                margin,
+                (0.34722222f * hei),
+                margin,
+                (0.65277778f * hei),
+                margin,
+                ((1f * hei) - margin)
         );
         p.lineTo(
-                ((originX + (-0.02083333f * len))),
-                (0.95833333f * hei))
+                originX - margin,
+                ((1f * hei) - margin)
         );
         p.cubicTo(
-                ((originX + (-0.02083333f * len))),
-                (0.95833333f * hei) * f),
-                ((originX + (-0.02083333f * len)) * f),
-                ((0.65277778f * hei) * f),
-                ((originX + (-0.02083333f * len)) * f),
-                ((0.34722222f * hei) * f)
+                originX - margin,
+                (0.65277778f * hei),
+                originX - margin,
+                (0.34722222f * hei),
+                originX - margin,
+                margin
         );
         p.close();
 

@@ -1,0 +1,98 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="300dp"
+    android:width="300dp"
+    android:viewportHeight="1600"
+    android:viewportWidth="1600" >
+
+    <group
+        android:name="background"
+        android:pivotX="800"
+        android:pivotY="800"
+        android:rotation="0" >
+        <path
+            android:name="top"
+            android:fillColor="@color/colorIconBackground"
+            android:pathData="M0,800 a800,800 0 0 1 1600,0z " />
+        <path
+            android:name="bottom"
+            android:fillColor="@color/colorIconBackground"
+            android:pathData="M0,800 a800,800 0 0 0 1600,0z " />
+    </group>
+
+    <group
+        android:name="anger"
+        android:pivotX="800"
+        android:pivotY="800"
+        android:rotation="0" >
+        <path
+            android:name="anger_slice"
+            android:fillColor="@color/colorAnger"
+            android:pathData="@string/path_slice_icon" />
+    </group>
+    <group
+        android:name="disgust"
+        android:pivotX="800"
+        android:pivotY="800"
+        android:rotation="60" >
+        <path
+            android:name="disgust_slice"
+            android:fillColor="@color/colorDisgust"
+            android:pathData="@string/path_slice_icon" />
+    </group>
+    <group
+        android:name="sadness"
+        android:pivotX="800"
+        android:pivotY="800"
+        android:rotation="120" >
+        <path
+            android:name="sadness_slice"
+            android:fillColor="@color/colorSadness"
+            android:pathData="@string/path_slice_icon" />
+    </group>
+    <group
+        android:name="happiness"
+        android:pivotX="800"
+        android:pivotY="800"
+        android:rotation="180" >
+        <path
+            android:name="happiness_slice"
+            android:fillColor="@color/colorHappiness"
+            android:pathData="@string/path_slice_icon" />
+    </group>
+    <group
+        android:name="surprise"
+        android:pivotX="800"
+        android:pivotY="800"
+        android:rotation="240" >
+        <path
+            android:name="surprise_slice"
+            android:fillColor="@color/colorSurprise"
+            android:pathData="@string/path_slice_icon" />
+    </group>
+    <group
+        android:name="fear"
+        android:pivotX="800"
+        android:pivotY="800"
+        android:rotation="300" >
+        <path
+            android:name="fear_slice"
+            android:fillColor="@color/colorFear"
+            android:pathData="@string/path_slice_icon" />
+    </group>
+
+    <group
+        android:name="credits"
+        android:pivotX="800"
+        android:pivotY="800"
+        android:rotation="0" >
+        <path
+            android:name="top"
+            android:fillColor="@color/colorCredits"
+            android:pathData="M650,800 a150,150 0 0 1 300,0z " />
+        <path
+            android:name="bottom"
+            android:fillColor="@color/colorCredits"
+            android:pathData="M650,800 a150,150 0 0 0 300,0z " />
+    </group>
+
+</vector>

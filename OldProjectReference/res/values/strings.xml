@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">ColorThesaurus</string>
+    <string name="buttonText">Start Animation</string>
+    <string name="thesaurus">thesaurus</string>
+    <string name="anger">angry</string>
+    <string name="happiness">happy</string>
+    <string name="fear">fear</string>
+    <string name="sadness">sadness</string>
+    <string name="surprise">surprise</string>
+    <string name="disgust">disgust</string>
+    <string name="pivot_X">800</string>
+    <string name="pivot_Y">1422.222222222222</string>
+    <string name="path_slice">
+        M 1369.615242270660,1122.222222222222
+        l -389.711431702997,225
+        c 23.914631173810,41.421356237310 23.914631173810,108.578643762690 0,150
+        l 389.711431702997,225
+        c 95.658524695240,-165.685424949238 95.658524695240,-434.314575050762 0,-600z
+    </string>
+    <string name="path_slice_icon">
+        M 1419.615242270660,500
+        l -389.711431702997,225
+        c 23.914631173810,41.421356237310 23.914631173810,108.578643762690 0,150
+        l 389.711431702997,225
+        c 95.658524695240,-165.685424949238 95.658524695240,-434.314575050762 0,-600z
+    </string>
+    <string name="path_slice_move_out">
+        M 1519.615242270660,1122.222222222222
+        l -389.711431702997,225
+        c 23.914631173810,41.421356237310 23.914631173810,108.578643762690 0,150
+        l 389.711431702997,225
+        c 95.658524695240,-165.685424949238 95.658524695240,-434.314575050762 0,-600z
+    </string>
+    <string name="word_definition_background">
+        M 1550,50
+        l -725,0
+        c 0,914.814814814814 0,1829.629629629629 0,2744.444444444444
+        l 725,0
+        c 0,-914.814814814814 0,-1829.629629629629 0,-2744.444444444444z
+    </string>
+    <string name="small_rectangle">
+        M 1369.615242270660,1122.222222222222
+        l -450,0
+        c 0,300 0,600 0,900
+        l 450,0
+        c 0,-300 0,-600 0,-900z
+    </string>
+    <string name="subdefinition_path">
+        M 1550,50
+        l -725,0
+        l 0,299.305555555556
+        l 725,0
+        l 0,-299.305555555556
+    </string>
+    <string name="subdefinition_path2">
+        M 1550,399.305555555556
+        l -725,0
+        l 0,299.305555555556
+        l 725,0
+        l 0,-299.305555555556
+    </string>
+    <string name="subdefinition_path3">
+        M 1550,748.611111111112
+        l -725,0
+        l 0,299.305555555556
+        l 725,0
+        l 0,-299.305555555556
+    </string>
+    <string name="subdefinition_path4">
+        M 1550,1097.916666666670
+        l -725,0
+        l 0,299.305555555556
+        l 725,0
+        l 0,-299.305555555556
+    </string>
+    <string name="subdefinition_path5">
+        M 1550,1447.222222222220
+        l -725,0
+        l 0,299.305555555556
+        l 725,0
+        l 0,-299.305555555556
+    </string>
+    <string name="subdefinition_path6">
+        M 1550,1796.527777777780
+        l -725,0
+        l 0,299.305555555556
+        l 725,0
+        l 0,-299.305555555556
+    </string>
+    <string name="subdefinition_path7">
+        M 1550,2145.833333333340
+        l -725,0
+        l 0,299.305555555556
+        l 725,0
+        l 0,-299.305555555556
+    </string>
+    <string name="subdefinition_path8">
+        M 1550,2495.138888888890
+        l -725,0
+        l 0,299.305555555556
+        l 725,0
+        l 0,-299.305555555556
+    </string>
+    <string name="subdefinition_path9">
+        M 1550,2844.444444444450
+        l -725,0
+        l 0,299.305555555556
+        l 725,0
+        l 0,-299.305555555556
+    </string>
+    <string name="subdefinition_path10">
+        M 1550,3193.750000000000
+        l -725,0
+        l 0,299.305555555556
+        l 725,0
+        l 0,-299.305555555556
+    </string>
+
+
+    <string name="subdefinition_pane_Y1">0</string>
+    <string name="subdefinition_pane_Y2">349.305555555556</string>
+    <string name="subdefinition_pane_Y3">698.611111111112</string>
+    <string name="subdefinition_pane_Y4">1047.916666666670</string>
+    <string name="subdefinition_pane_Y5">1397.222222222220</string>
+    <string name="subdefinition_pane_Y6">1746.527777777780</string>
+    <string name="subdefinition_pane_Y7">2095.833333333340</string>
+    <string name="subdefinition_pane_Y8">2445.138888888890</string>
+    <string name="subdefinition_pane_Y9">2794.444444444450</string>
+    <string name="subdefinition_pane_Y10">3143.750000000000</string>
+</resources>

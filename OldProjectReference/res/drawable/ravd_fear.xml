@@ -1,0 +1,115 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/pie_fear" >
+
+    <target
+        android:name="anger"
+        android:animation="@anim/r_rotate_000" />
+    <target
+        android:name="disgust"
+        android:animation="@anim/r_rotate_060" />
+    <target
+        android:name="sadness"
+        android:animation="@anim/r_rotate_120" />
+    <target
+        android:name="happiness"
+        android:animation="@anim/r_rotate_180" />
+    <target
+        android:name="surprise"
+        android:animation="@anim/r_rotate_240" />
+    <target
+        android:name="fear"
+        android:animation="@anim/r_rotate_300" />
+    <target
+        android:name="fear_slice"
+        android:animation="@anim/rectangle_deflate" />
+
+    <target
+        android:name="anger_slice"
+        android:animation="@anim/translate_in" />
+    <target
+        android:name="disgust_slice"
+        android:animation="@anim/translate_in" />
+    <target
+        android:name="sadness_slice"
+        android:animation="@anim/translate_in" />
+    <target
+        android:name="happiness_slice"
+        android:animation="@anim/translate_in" />
+    <target
+        android:name="surprise_slice"
+        android:animation="@anim/translate_in" />
+
+    <target
+        android:name="anger_slice"
+        android:animation="@anim/fade_in" />
+    <target
+        android:name="disgust_slice"
+        android:animation="@anim/fade_in" />
+    <target
+        android:name="sadness_slice"
+        android:animation="@anim/fade_in" />
+    <target
+        android:name="happiness_slice"
+        android:animation="@anim/fade_in" />
+    <target
+        android:name="surprise_slice"
+        android:animation="@anim/fade_in" />
+
+    <target
+        android:name="credits"
+        android:animation="@anim/shrink_in" />
+
+    <target
+        android:animation="@anim/fade_out"
+        android:name="dictionary_left_pane_path1" />
+    <target
+        android:animation="@anim/color_white"
+        android:name="dictionary_left_pane_path1" />
+    <target
+        android:animation="@anim/fade_out"
+        android:name="dictionary_left_pane_path2" />
+    <target
+        android:animation="@anim/color_white"
+        android:name="dictionary_left_pane_path2" />
+    <target
+        android:animation="@anim/fade_out"
+        android:name="dictionary_left_pane_path3" />
+    <target
+        android:animation="@anim/color_white"
+        android:name="dictionary_left_pane_path3" />
+    <target
+        android:animation="@anim/fade_out"
+        android:name="dictionary_left_pane_path4" />
+    <target
+        android:animation="@anim/color_white"
+        android:name="dictionary_left_pane_path4" />
+    <target
+        android:animation="@anim/fade_out"
+        android:name="dictionary_left_pane_path5" />
+    <target
+        android:animation="@anim/color_white"
+        android:name="dictionary_left_pane_path5" />
+    <target
+        android:animation="@anim/fade_out"
+        android:name="dictionary_left_pane_path6" />
+    <target
+        android:animation="@anim/color_white"
+        android:name="dictionary_left_pane_path6" />
+    <target
+        android:animation="@anim/fade_out"
+        android:name="dictionary_left_pane_path7" />
+    <target
+        android:animation="@anim/color_white"
+        android:name="dictionary_left_pane_path7" />
+    <target
+        android:animation="@anim/fade_out"
+        android:name="dictionary_left_pane_path8" />
+    <target
+        android:animation="@anim/color_white"
+        android:name="dictionary_left_pane_path8" />
+
+    <target
+        android:animation="@anim/translate_down"
+        android:name="right_pane_whole" />
+
+</animated-vector>

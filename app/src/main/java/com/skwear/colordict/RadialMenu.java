@@ -93,7 +93,6 @@ public class RadialMenu extends AppCompatImageView {
             if (r < centerR) {
                 //TODO About box for center credits button
             }
-            //TODO pass to pie anim view
             //Log.d("CREATION", "1");
             pie.setVisibility(ViewGroup.GONE);
             //Log.d("CREATION", "2");
@@ -107,6 +106,7 @@ public class RadialMenu extends AppCompatImageView {
     public void onDraw(Canvas canvas) {
         originX = getHeight() / 2;
         originY = getWidth() / 2;
+        //Note: the view is square, so getWidth() == getHeight()
         innerR = (11f / 96f) * getWidth();
         outerR = (43f / 96f) * getWidth();
         centerR = (1f / 12f) * getWidth();

@@ -1,0 +1,105 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="300dp"
+    android:width="300dp"
+    android:viewportHeight="1400"
+    android:viewportWidth="1400" >
+
+    <group
+        android:name="anger"
+        android:pivotX="700"
+        android:pivotY="700"
+        android:rotation="0" >
+        <path
+            android:name="v"
+            android:fillColor="#FF0000"
+            android:pathData="M1269.615242270660,400
+                              l -389.711431702997,225
+                              c 23.914631173810,41.421356237310 23.914631173810,108.578643762690 0,150
+                              l 389.711431702997,225
+                              c 95.658524695240,-165.685424949238 95.658524695240,-434.314575050762 0,-600z" />
+    </group>
+    <group
+        android:name="disgust"
+        android:pivotX="700"
+        android:pivotY="700"
+        android:rotation="60" >
+        <path
+            android:name="v"
+            android:fillColor="#FF00FF"
+            android:pathData="M1269.615242270660,400
+                              l -389.711431702997,225
+                              c 23.914631173810,41.421356237310 23.914631173810,108.578643762690 0,150
+                              l 389.711431702997,225
+                              c 95.658524695240,-165.685424949238 95.658524695240,-434.314575050762 0,-600z" />
+    </group>
+    <group
+        android:name="sadness"
+        android:pivotX="700"
+        android:pivotY="700"
+        android:rotation="120" >
+        <path
+            android:name="v"
+            android:fillColor="#0000FF"
+            android:pathData="M1269.615242270660,400
+                              l -389.711431702997,225
+                              c 23.914631173810,41.421356237310 23.914631173810,108.578643762690 0,150
+                              l 389.711431702997,225
+                              c 95.658524695240,-165.685424949238 95.658524695240,-434.314575050762 0,-600z" />
+    </group>
+    <group
+        android:name="happiness"
+        android:pivotX="700"
+        android:pivotY="700"
+        android:rotation="180" >
+        <path
+            android:name="v"
+            android:fillColor="#FFFF00"
+            android:pathData="M1269.615242270660,400
+                              l -389.711431702997,225
+                              c 23.914631173810,41.421356237310 23.914631173810,108.578643762690 0,150
+                              l 389.711431702997,225
+                              c 95.658524695240,-165.685424949238 95.658524695240,-434.314575050762 0,-600z" />
+    </group>
+    <group
+        android:name="surprise"
+        android:pivotX="700"
+        android:pivotY="700"
+        android:rotation="240" >
+        <path
+            android:name="v"
+            android:fillColor="#00FFFF"
+            android:pathData="M1269.615242270660,400
+                              l -389.711431702997,225
+                              c 23.914631173810,41.421356237310 23.914631173810,108.578643762690 0,150
+                              l 389.711431702997,225
+                              c 95.658524695240,-165.685424949238 95.658524695240,-434.314575050762 0,-600z" />
+    </group>
+    <group
+        android:name="fear"
+        android:pivotX="700"
+        android:pivotY="700"
+        android:rotation="300" >
+        <path
+            android:name="v"
+            android:fillColor="#00FF00"
+            android:pathData="M1269.615242270660,400
+                              l -389.711431702997,225
+                              c 23.914631173810,41.421356237310 23.914631173810,108.578643762690 0,150
+                              l 389.711431702997,225
+                              c 95.658524695240,-165.685424949238 95.658524695240,-434.314575050762 0,-600z" />
+    </group>
+    <group
+        android:name="credits"
+        android:pivotX="700"
+        android:pivotY="700"
+        android:rotation="0" >
+        <path
+            android:name="top"
+            android:fillColor="#000000"
+            android:pathData="M550,700 a150,150 0 0 1 300,0z " />
+        <path
+            android:name="bottom"
+            android:fillColor="#000000"
+            android:pathData="M550,700 a150,150 0 0 0 300,0z " />
+    </group>
+</vector>
